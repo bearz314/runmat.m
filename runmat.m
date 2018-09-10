@@ -20,6 +20,7 @@ function array = runmat(varargin)
     if nargin == 1
         array = reshape(1:arrSize*arrSize, arrSize,[])';
     else
+        arrSize([2 1]) = arrSize([1 2]);
         array = reshape(1:prod(arrSize), arrSize);
         
         order = 1:nargin;
